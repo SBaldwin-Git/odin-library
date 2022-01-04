@@ -5,12 +5,6 @@ class Book {
         this.pages = pages;
         this.read = read;
     }
-
-    getT
-
-    getInfo() {
-        return this.title + ',' + this.author + ',' + this.pages + ',' + this.read;
-    }
 }
 
 function createCard(title, author, pages, read) {
@@ -78,5 +72,3 @@ function addBookToLibrary(title, author, pages, read) {
 library.forEach(book => {
     createCard(book.title, book.author, book.pages, book.read)
 });
-
-console.log(library[0].getInfo());
