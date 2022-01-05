@@ -97,6 +97,6 @@ function addBookToLibrary(title, author, pages, read) {
     library.push(new Book(title, author, pages, read))
 }
 
-library.forEach(book => {
-    createCard(book.title, book.author, book.pages, book.read, book.bookId)
-});
+// library.forEach(book => {
+//     createCard(book.title, book.author, book.pages, book.read, book.bookId)
+// });

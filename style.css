@@ -7,6 +7,41 @@ html {
     height: 100%;
 }
 
+img{
+    width: 300px;
+    height: 200px;
+}
+
+#tableContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+}
+
+table{
+    width: 60%;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+th{
+    background-color: lightcoral;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+td{
+    border-bottom: 2px solid black;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+#statusCheckbox{
+    margin-right: 5%;
+    margin-left: 0px;
+}
+
 .card {
     text-align: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -81,9 +116,8 @@ body {
     font-size: 30px;
     font-weight: lighter;
     padding: 1%;
-    border-style: dashed;
     flex-grow: 2;
-    text-align: left;
+    text-align: center;
     padding-left: 1%;
 }
 
@@ -108,8 +142,8 @@ body {
     border: 2px solid black;
     border-radius: 5px;
     padding: 10px;
-    margin-left: 2%;
-    width: 30%;
+    width: 100px;
+    margin: 0px;
 }
 
 #deleteBtn:hover {
@@ -123,7 +157,7 @@ body {
 /*  */
 /* THIS IS A TEST PLEASE DELETE */
 #bookNum2 {
-    background-color: red;
+    background-color: hotpink;
 }
 
 /* THIS IS A TEST PLEASE DELETE */
