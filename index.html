@@ -13,18 +13,16 @@
     <title>Odin Library</title>
 </head>
 <header>
-    <div class="container" id="buttonContainer">
-        <img src="media/book.png" alt="" srcset="">
-        <div id="mainTitle">
-            <h1>Odin Library</h1>
-        </div>
-        <button id="newBookButton">+</button>
+    <img src="media/book.png" alt="" srcset="">
+    <div id="mainTitle">
+        <h1>Odin Library</h1>
     </div>
+    <button id="newBookButton">+</button>
 </header>
 
 <body>
     <div id="tableContainer">
-        <table>
+        <table id="libraryTable">
             <tr>
                 <th>TITLE</th>
                 <th>AUTHOR</th>
@@ -32,16 +30,8 @@
                 <th>STATUS</th>
                 <th>REMOVE</th>
             </tr>
-            <tr>
-                <td>The Fellowship of the Ring</td>
-                <td>J.R.R Tolkien</td>
-                <td>500</td>
-                <td><input type="checkbox" checked name="statusCheckbox" id="statusCheckbox" value="status">Read</td>
-                <td><button id="deleteBtn">Remove</button></td>
-            </tr>
         </table>
     </div>
-    <div id="cardContainer" class="container"></div>
 </body>
 <script src="script.js"></script>
 

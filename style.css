@@ -7,84 +7,15 @@ html {
     height: 100%;
 }
 
-img{
-    width: 300px;
-    height: 200px;
-}
-
-#tableContainer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2%;
-}
-
-table{
-    width: 60%;
-    text-align: left;
-    border-collapse: collapse;
-}
-
-th{
-    background-color: lightcoral;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-td{
-    border-bottom: 2px solid black;
-    padding-top: 8px;
-    padding-bottom: 8px;
-}
-
-#statusCheckbox{
-    margin-right: 5%;
-    margin-left: 0px;
-}
-
-.card {
-    text-align: center;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
-    width: 20%;
-    border-radius: 5px;
-    padding: 2px 16px 30px;
-    margin: auto;
-    background-color: lavender;
-    margin-bottom: 20px;
-    margin-top: 20px;
-}
-
-.card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
-}
-
-.card h1,
-h2 {
-    text-decoration: underline;
-    color: dimgrey;
-}
-
-.card p {
-    font-style: italic;
-    font-size: larger;
-}
-
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 5px;
-}
-
 html,
 body {
     margin: 0;
     padding: 0;
 }
 
-#buttonContainer {
+/* HEADER */
+
+header {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -95,8 +26,8 @@ body {
 }
 
 #newBookButton {
-    width: 300px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     border-radius: 10px;
     border: solid 3px black;
     background-color: paleturquoise;
@@ -113,7 +44,7 @@ body {
 
 #mainTitle {
     font-family: Arial;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: lighter;
     padding: 1%;
     flex-grow: 2;
@@ -121,20 +52,53 @@ body {
     padding-left: 1%;
 }
 
-#statusBtn {
-    background-color: rgb(104, 221, 104);
-    border: 2px solid black;
-    border-radius: 5px;
-    padding: 10px;
-    width: 30%;
+img {
+    width: 200px;
+    height: 100px;
 }
 
-#statusBtn:hover {
-    background-color: rgb(171, 221, 171);
+/* TABLE */
+
+#tableContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
 }
 
-#statusBtn:active {
-    background-color: rgb(73, 219, 73);
+table {
+    width: 60%;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: lightcoral;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+td {
+    border-bottom: 2px solid black;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+#statusCheckbox {
+    margin-right: 5%;
+    margin-left: 0px;
+}
+
+input {
+    height: 25px;
+    width: 25px;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
 }
 
 #deleteBtn {
@@ -153,12 +117,3 @@ body {
 #deleteBtn:active {
     background-color: rgb(248, 67, 35);
 }
-
-/*  */
-/* THIS IS A TEST PLEASE DELETE */
-#bookNum2 {
-    background-color: hotpink;
-}
-
-/* THIS IS A TEST PLEASE DELETE */
-/*  */
