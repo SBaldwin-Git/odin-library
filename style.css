@@ -2,7 +2,7 @@
     font-family: 'Roboto', sans-serif;
 }
 
-html{
+html {
     width: 100%;
     height: 100%;
 }
@@ -43,12 +43,13 @@ h2 {
     gap: 5px;
 }
 
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
 }
 
-#buttonContainer{
+#buttonContainer {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -58,7 +59,7 @@ html, body {
     gap: 1%;
 }
 
-#newBookButton{
+#newBookButton {
     width: 300px;
     height: 200px;
     border-radius: 10px;
@@ -67,26 +68,26 @@ html, body {
     font-size: 100px;
 }
 
-#newBookButton:hover{
+#newBookButton:hover {
     background-color: rgb(195, 231, 231);
 }
 
-#newBookButton:active{
+#newBookButton:active {
     background-color: rgb(100, 233, 233);
 }
 
-#mainTitle{
+#mainTitle {
     font-family: Arial;
     font-size: 30px;
     font-weight: lighter;
     padding: 1%;
     border-style: dashed;
     flex-grow: 2;
-    text-align:left;
+    text-align: left;
     padding-left: 1%;
 }
 
-#statusBtn{
+#statusBtn {
     background-color: rgb(104, 221, 104);
     border: 2px solid black;
     border-radius: 5px;
@@ -94,15 +95,15 @@ html, body {
     width: 30%;
 }
 
-#statusBtn:hover{
+#statusBtn:hover {
     background-color: rgb(171, 221, 171);
 }
 
-#statusBtn:active{
+#statusBtn:active {
     background-color: rgb(73, 219, 73);
 }
 
-#deleteBtn{
+#deleteBtn {
     background-color: tomato;
     border: 2px solid black;
     border-radius: 5px;
@@ -111,10 +112,19 @@ html, body {
     width: 30%;
 }
 
-#deleteBtn:hover{
+#deleteBtn:hover {
     background-color: rgb(250, 131, 110);
 }
 
-#deleteBtn:active{
+#deleteBtn:active {
     background-color: rgb(248, 67, 35);
 }
+
+/*  */
+/* THIS IS A TEST PLEASE DELETE */
+#bookNum2 {
+    background-color: red;
+}
+
+/* THIS IS A TEST PLEASE DELETE */
+/*  */

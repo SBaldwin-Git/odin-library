@@ -13,7 +13,11 @@ function createCard(title, author, pages, read, bookId) {
     //Card div
     let cardDiv = document.createElement('div');
     cardDiv.className = 'card';
-    cardDiv.id = 'bookNum'+bookId;
+    //
+    // ID CREATOR TEST PLEASE DELETE AFTER
+    cardDiv.id = 'bookNum' + bookId;
+    // ID CREATOR TEST PLEASE DELETE AFTER
+    //
     let cardId = bookId;
 
     //Headers
@@ -62,7 +66,7 @@ function createCard(title, author, pages, read, bookId) {
     deleteButton.id = 'deleteBtn';
 
     //Delete card and splice library array
-    deleteButton.addEventListener('click', function(){
+    deleteButton.addEventListener('click', function() {
         cardDiv.parentNode.removeChild(cardDiv)
         library.splice(cardId, 1);
     });
@@ -94,5 +98,5 @@ function addBookToLibrary(title, author, pages, read) {
 }
 
 library.forEach(book => {
-    createCard(book.title, book.author, book.pages, book.read, this.bookId)
+    createCard(book.title, book.author, book.pages, book.read, book.bookId)
 });
