@@ -94,7 +94,7 @@ input {
     width: 25px;
 }
 
-label {
+table label {
     display: flex;
     align-items: center;
     flex-direction: row-reverse;
@@ -120,8 +120,56 @@ label {
 
 /* FORM */
 
-#form{
-    height: 50%;
-    width: 20%;
-    background-color: hotpink;
+.formContainer{
+    display: none;
+    position: fixed;
+    height: 600px;
+    width: 25%;
+    background-color: paleturquoise;
+    border: 3px solid #f1f1f1;
+    border:solid 2px black;
+    border-radius: 20px;
+    padding: 5px;
+    text-align: center;
+
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+form label{
+    font-size: 20px;
+}
+
+.formContainer h1{
+    font-size: 40px;
+    text-decoration: underline;
+}
+
+form #statusCheckbox{
+    margin: 0;
+    margin-top: 10px;
+}
+
+#formCheckDiv{
+    display:flex;
+    justify-content: center;
+}
+
+form input{
+    width: 90%;
+    margin-bottom: 5%;
+    margin-top: 2%;
+    height: 40px;
+}
+
+#submitButton{
+    margin: 2%;
+    width: 95%;
+    height: 15%;
+    border: 3px solid #f1f1f1;
+    border:solid 2px black;
+    border-radius: 20px;
+    font-size: 30px;
 }

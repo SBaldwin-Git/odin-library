@@ -1,4 +1,24 @@
 let table = document.getElementById('libraryTable');
+let newBookButton = document.getElementById('newBookButton');
+let submitButton = document.getElementById('submitButton');
+//Form text
+let formTitle = document.getElementById('formTitle');
+let formAuthor = document.getElementById('formAuthor');
+let formPages = document.getElementById('formPages');
+let statusCheckbox = document.getElementById('statusCheckbox');
+
+
+submitButton.addEventListener('click', function(){
+    let title;
+    let author;
+    let pages;
+    let read;
+    let bookId;
+
+
+    document.getElementsByClassName('formContainer')[0].style.display = 'none';
+})
+
 
 class Book {
     constructor(title, author, pages, read, bookId) {
@@ -64,6 +84,10 @@ function createRow(title, author, pages, read, bookId) {
     removeButtonCell.appendChild(deleteButton);
 }
 
+newBookButton.addEventListener('click', function(){
+    document.getElementsByClassName('formContainer')[0].style.display = 'block';
+})
+
 //HTML body
 let body = document.querySelector('#cardContainer');
 
@@ -82,6 +106,7 @@ function addBookToLibrary(title, author, pages, read) {
     library.push(new Book(title, author, pages, read))
 }
 
+//Initial table population
 library.forEach(book => {
     createRow(book.title, book.author, book.pages, book.read, book.bookId)
 });

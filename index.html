@@ -38,17 +38,20 @@
             <h1>New Book</h1>
 
             <label for="formTitle">TITLE:</label>
-            <input type="text" name="formTitle" id="formTitle" placeholder='Enter book title...' required>
+            <input type="text" name="formTitle" id="formTitle" placeholder=' Enter book title...' required>
 
             <label for="formAuthor">AUTHOR:</label>
-            <input type="text" name="formAuthor" id="formAuthor" placeholder='Enter book author...' required>
+            <input type="text" name="formAuthor" id="formAuthor" placeholder=' Enter book author...' required>
 
             <label for="formPages">PAGES:</label>
-            <input type="text" name="formPages" id="formPages" placeholder='Enter number of pages...' required>
+            <input type="text" name="formPages" id="formPages" placeholder=' Enter number of pages...' required>
 
-            <label for="statusCheckbox">Completed<input type="checkbox" name="statusCheckbox" id="statusCheckbox"></label>
+            <div id="formCheckDiv">
+                <label for="statusCheckbox" id="formCheckLabel">Completed <br><input type="checkbox" name="statusCheckbox"
+                        id="statusCheckbox"></label>
+            </div>
+            <button id="submitButton">SUBMIT</button>
         </form>
-
     </div>
 </body>
 <script src="script.js"></script>
