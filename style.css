@@ -52,7 +52,7 @@ header {
     padding-left: 1%;
 }
 
-img {
+header img {
     width: 200px;
     height: 100px;
 }
@@ -172,4 +172,18 @@ form input{
     border:solid 2px black;
     border-radius: 20px;
     font-size: 30px;
+}
+
+/* FOOTER */
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    margin-top: 1%;
+}
+
+footer p{
+    margin-right: 5px;
 }
