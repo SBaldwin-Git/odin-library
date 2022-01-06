@@ -48,7 +48,7 @@ function addBookToLibrary(title, author, pages, read, bookId) {
 function createRow(title, author, pages, read, bookId) {
 
     //Define cells
-    let row = table.insertRow(1);
+    let row = table.insertRow(-1);
     let titleCell = row.insertCell(0);
     let authorCell = row.insertCell(1);
     let pagesCell = row.insertCell(2);
@@ -113,14 +113,15 @@ newBookButton.addEventListener('click', function() {
 });
 
 // Test books
-let book1 = new Book('The Fellowship of the Ring', 'J.R.R Tolkien', 300, true, 0);
-let book2 = new Book('The Two Towers', 'J.R.R Tolkien', 400, true, 1);
-let book3 = new Book('The Return of the King', 'J.R.R Tolkien', 500, false, 2);
-let book4 = new Book('The Return of the Ting', 'J.R.R Tolkien', 500, true, 3);
-let book5 = new Book('The Return of the Bling', 'J.R.R Tolkien', 500, false, 4);
+let book1 = new Book('The Fellowship of the Ring', 'J.R.R Tolkien', 423, true, 0);
+let book2 = new Book('The Two Towers', 'J.R.R Tolkien', 352, true, 1);
+let book3 = new Book('The Return of the King', 'J.R.R Tolkien', 416, false, 2);
+let book4 = new Book('Overlord Vol.1', 'Kugane Maruyama ', 256, true, 3);
+let book5 = new Book('Overlord Vol.2', 'Kugane Maruyama ', 284, true, 4);
+let book6 = new Book('The Blade Itself: Book One (The First Law 1)', 'Joe Abercrombie', 536, true, 5)
 
 //Library array holding test books for debugging
-let library = [book1, book2, book3, book4, book5];
+let library = [book1, book2, book3, book4, book5, book6];
 
 library.forEach(book => {
     createRow(book.title, book.author, book.pages, book.read, book.bookId)
