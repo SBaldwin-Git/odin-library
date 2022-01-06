@@ -6,19 +6,7 @@ let formTitle = document.getElementById('formTitle');
 let formAuthor = document.getElementById('formAuthor');
 let formPages = document.getElementById('formPages');
 let statusCheckbox = document.getElementById('statusCheckbox');
-
-
-submitButton.addEventListener('click', function(){
-    let title;
-    let author;
-    let pages;
-    let read;
-    let bookId;
-
-
-    document.getElementsByClassName('formContainer')[0].style.display = 'none';
-})
-
+let formIsVisible = false;
 
 class Book {
     constructor(title, author, pages, read, bookId) {
@@ -28,7 +16,34 @@ class Book {
         this.read = read;
         this.bookId = bookId;
     }
-}
+};
+
+submitButton.addEventListener('click', function() {
+    let title = formTitle.value;
+    let author = formAuthor.value;
+    let pages = formPages.value;
+    let read;
+    let bookId = library.length;
+
+    if (statusCheckbox.checked) {
+        read = true;
+    } else {
+        read = false;
+    }
+
+    addBookToLibrary(title, author, pages, read, bookId);
+    document.getElementsByClassName('formContainer')[0].style.display = 'none';
+    formTitle.value = '';
+    formAuthor.value = '';
+    formPages.value = '';
+    statusCheckbox.checked = false;
+});
+
+// Adds new book object from text input to library array
+function addBookToLibrary(title, author, pages, read, bookId) {
+    library.push(new Book(title, author, pages, read, bookId));
+    createRow(title, author, pages, read, bookId);
+};
 
 function createRow(title, author, pages, read, bookId) {
 
@@ -84,12 +99,18 @@ function createRow(title, author, pages, read, bookId) {
     removeButtonCell.appendChild(deleteButton);
 }
 
-newBookButton.addEventListener('click', function(){
-    document.getElementsByClassName('formContainer')[0].style.display = 'block';
-})
+newBookButton.addEventListener('click', function() {
 
-//HTML body
-let body = document.querySelector('#cardContainer');
+    if (formIsVisible == false) {
+        document.getElementsByClassName('formContainer')[0].style.display = 'block';
+        formIsVisible = true;
+
+    } else {
+        document.getElementsByClassName('formContainer')[0].style.display = 'none';
+        formIsVisible = false;
+    }
+
+});
 
 // Test books
 let book1 = new Book('The Fellowship of the Ring', 'J.R.R Tolkien', 300, true, 0);
@@ -101,12 +122,6 @@ let book5 = new Book('The Return of the Bling', 'J.R.R Tolkien', 500, false, 4);
 //Library array holding test books for debugging
 let library = [book1, book2, book3, book4, book5];
 
-// Adds new book object from text input to library array
-function addBookToLibrary(title, author, pages, read) {
-    library.push(new Book(title, author, pages, read))
-}
-
-//Initial table population
 library.forEach(book => {
     createRow(book.title, book.author, book.pages, book.read, book.bookId)
 });
